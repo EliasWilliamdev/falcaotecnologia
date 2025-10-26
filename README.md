@@ -27,26 +27,11 @@
     3. Ative GitHub Pages nas configurações do repositório, apontando para o branch `gh-pages`.
     4. Recomendo usar [vite-plugin-gh-pages](https://github.com/vitejs/vite-plugin-gh-pages) para automatizar.
 
-    ### Netlify
-    1. Faça login em [netlify.com](https://netlify.com) e clique em "New site from Git".
-    2. Selecione seu repositório.
-    3. Configure o comando de build: `npm run build` e o diretório de publicação: `dist`.
-    4. Deploy automático a cada push.
-
-    ### Vercel
-    1. Faça login em [vercel.com](https://vercel.com) e clique em "Add New Project".
-    2. Selecione seu repositório.
-    3. O Vercel detecta Vite automaticamente (`npm run build`, output: `dist`).
-    4. Deploy automático a cada push.
-
     ## Estrutura do projeto
     - `src/` — componentes React e estilos
     - `public/assets/images/` — imagens extraídas do PDF
     - `saida.txt` — texto extraído do PDF
     - `Portfólio  Falcão Tecnologia.pdf` — PDF original
-
-    ## Contato
-    Botão flutuante do WhatsApp já configurado para contato rápido.
 
     ---
     Deploy fácil, responsivo e pronto para produção!
