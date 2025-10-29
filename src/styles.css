@@ -1,2 +1,509 @@
-@import 'tailwindcss';
+.final-col:first-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100%;
+	padding-top: 90px;
+}
+/* Grid final de 2 colunas centralizadas para Depoimentos e Fale Conosco */
+.final-grid-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 40px;
+	justify-content: center;
+	margin: 48px 0 0 0;
+}
+@media (max-width: 900px) {
+	.final-grid-2 {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+}
+/* Botão de enviar por e-mail profissional */
+.btn.email {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	background: #e6f4ea;
+	color: #0ea5a4;
+	border: 1.5px solid #0ea5a4;
+	font-weight: 600;
+	border-radius: 8px;
+	padding: 10px 18px;
+	font-size: 1rem;
+	text-decoration: none;
+	transition: background 0.18s, color 0.18s, border 0.18s;
+}
+.btn.email:hover {
+	background: #0ea5a4;
+	color: #fff;
+	border-color: #0ea5a4;
+}
+.btn.email svg {
+	margin-right: 6px;
+	vertical-align: middle;
+}
+/* Feedback do envio do formulário de contato */
+.form-success {
+	margin-top: 18px;
+	background: #e6f4ea;
+	color: #0ea5a4;
+	font-weight: 600;
+	border-radius: 8px;
+	padding: 14px 10px;
+	text-align: center;
+	box-shadow: 0 2px 8px rgba(15,23,42,0.06);
+}
+.btn.primary[disabled] {
+	opacity: 0.7;
+	cursor: not-allowed;
+	transition: opacity 0.18s;
+}
+/* Cards profissionais para campos do formulário de contato */
+.contact-form {
+	margin-top: 24px;
+}
+.form-row {
+	display: flex;
+	gap: 24px;
+	margin-bottom: 18px;
+}
+.input-card {
+	background: #f8fafc;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(15,23,42,0.06);
+	border: 1px solid #e6eef5;
+	padding: 16px 14px 8px 14px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.input-card label {
+	font-size: 1rem;
+	color: #0ea5a4;
+	font-weight: 600;
+	margin-bottom: 6px;
+}
+.input-card input,
+.input-card select,
+.input-card textarea {
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 1.05rem;
+	color: #334155;
+	padding: 7px 0 6px 0;
+	border-bottom: 1.5px solid #e6eef5;
+	margin-bottom: 2px;
+	transition: border-color 0.18s;
+}
+.input-card input:focus,
+.input-card select:focus,
+.input-card textarea:focus {
+	border-bottom: 1.5px solid #0ea5a4;
+}
+.input-card textarea {
+	resize: vertical;
+	min-height: 80px;
+}
+@media (max-width: 700px) {
+	.form-row {
+		flex-direction: column;
+		gap: 12px;
+	}
+	.input-card {
+		padding: 12px 8px 6px 8px;
+	}
+}
+/* Bloco final da página: grid moderno */
+.final-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+	margin: 48px 0 0 0;
+}
+.final-col {
+	background: #fff;
+	border-radius: 14px;
+	box-shadow: 0 6px 24px rgba(15,23,42,0.10);
+	border: 1px solid #e6eef5;
+	padding: 32px 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.final-footer-card h3 {
+	color: #0ea5a4;
+	font-size: 1.3rem;
+	font-weight: 700;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.final-footer-card p {
+	color: #334155;
+	font-size: 1.05rem;
+	margin: 0 0 8px 0;
+	text-align: center;
+}
+.final-footer-card .credit {
+	font-size: 0.95rem;
+	color: #64748b;
+	margin-top: 18px;
+	text-align: center;
+}
+@media (max-width: 900px) {
+	.final-grid {
+		grid-template-columns: 1fr;
+		gap: 24px;
+	}
+	.final-col {
+		padding: 22px 8px;
+	}
+}
+/* Botão WhatsApp flutuante profissional */
+.whatsapp-fab {
+	position: fixed;
+	right: 32px;
+	bottom: 32px;
+	z-index: 999;
+	background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+	color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 6px 24px rgba(15,23,42,0.18);
+	width: 62px;
+	height: 62px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: box-shadow 0.18s, transform 0.18s;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+}
+.whatsapp-fab:hover {
+	box-shadow: 0 12px 32px rgba(15,23,42,0.28);
+	transform: scale(1.08);
+	background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+}
+.whatsapp-fab svg {
+	width: 32px;
+	height: 32px;
+	display: block;
+}
+@media (max-width: 700px) {
+	.whatsapp-fab {
+		right: 16px;
+		bottom: 16px;
+		width: 52px;
+		height: 52px;
+	}
+	.whatsapp-fab svg {
+		width: 24px;
+		height: 24px;
+	}
+}
+/* Grid dos serviços principais abaixo do Hero */
+.main-services-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 32px;
+	margin: 40px 0 32px 0;
+}
+.main-service-card {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 12px rgba(15,23,42,0.08);
+	border: 1px solid #e6eef5;
+	padding: 24px 18px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.main-service-card h3 {
+	color: #0ea5a4;
+	font-size: 1.15rem;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.main-service-card p {
+	color: #334155;
+	font-size: 1.01rem;
+	margin: 0;
+}
+@media (max-width: 1100px) {
+	.main-services-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 18px;
+	}
+}
+@media (max-width: 700px) {
+	.main-services-grid {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+	.main-service-card {
+		padding: 18px 8px;
+	}
+}
+/* Hero Section */
+.hero-content {
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 48px 16px 32px 16px;
+}
+.hero-title {
+	font-size: 2.6rem;
+	font-weight: 800;
+	color: #0ea5a4;
+	margin-bottom: 18px;
+	letter-spacing: 0.5px;
+}
+.hero-subtitle {
+	font-size: 1.25rem;
+	color: #0f172a;
+	font-weight: 500;
+	margin-bottom: 16px;
+}
+.hero-list {
+	display: flex;
+	justify-content: center;
+	gap: 18px;
+	list-style: none;
+	padding: 0;
+	margin-bottom: 18px;
+}
+.hero-list li {
+	background: #e6f4ea;
+	color: #0ea5a4;
+	font-weight: 600;
+	padding: 7px 18px;
+	border-radius: 8px;
+	font-size: 1rem;
+	box-shadow: 0 2px 8px rgba(15,23,42,0.06);
+}
+.hero-desc {
+	color: #334155;
+	font-size: 1.08rem;
+	margin-bottom: 24px;
+	line-height: 1.6;
+}
+.cta-row {
+	display: flex;
+	justify-content: center;
+	gap: 18px;
+	margin-top: 8px;
+}
+@media (max-width: 700px) {
+	.hero-title {
+		font-size: 2rem;
+	}
+	.hero-content {
+		padding: 32px 8px 18px 8px;
+	}
+	.hero-list {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.cta-row {
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+/* Atendimento especializado */
+.specialized-service {
+	background: #f1f5f9;
+	padding: 32px 0 0 0;
+}
+.specialized-card {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 12px rgba(15,23,42,0.08);
+	border: 1px solid #e6eef5;
+	max-width: 520px;
+	margin: 0 auto 24px auto;
+	padding: 24px 20px;
+	text-align: center;
+}
+.specialized-card h3 {
+	color: #0ea5a4;
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.specialized-card p {
+	color: #334155;
+	font-size: 1.05rem;
+	margin: 0;
+}
+/* Purposes Group Layout */
+.purposes-group {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 32px;
+	justify-items: center;
+	margin-top: 12px;
+}
+@media (max-width: 900px) {
+	.purposes-group {
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+}
+
+/* Navbar */
+.navbar {
+	background: #fff;
+	border-bottom: 1px solid #e6eef5;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 2px 8px rgba(15,23,42,0.04);
+}
+.nav-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 24px;
+	height: 64px;
+}
+.logo {
+	font-weight: 700;
+	font-size: 1.25rem;
+	color: #0ea5a4;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+}
+.nav-links {
+	list-style: none;
+	display: flex;
+	gap: 24px;
+	margin: 0;
+	padding: 0;
+}
+.nav-links a {
+	color: #0f172a;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 1rem;
+	padding: 8px 12px;
+	border-radius: 6px;
+	transition: background 0.18s, color 0.18s;
+}
+.nav-links a:hover, .nav-links a.active {
+	background: #e6f4ea;
+	color: #0ea5a4;
+}
+@media (max-width: 700px) {
+	.nav-inner {
+		flex-direction: column;
+		height: auto;
+		padding: 12px 8px;
+	}
+	.nav-links {
+		gap: 12px;
+		flex-wrap: wrap;
+	}
+}
+html {
+	scroll-behavior: smooth;
+}
+
+/* Purposes Block */
+.purposes-block {
+	background: #e6f4ea;
+	border-radius: 12px;
+	padding: 28px 22px;
+	margin-bottom: 24px;
+	box-shadow: 0 2px 12px rgba(15,23,42,0.06);
+	max-width: 520px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.purposes-title {
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: #0ea5a4;
+	margin-bottom: 12px;
+	text-align: center;
+}
+.purposes-text p {
+	margin: 0 0 8px 0;
+	color: #334155;
+	font-size: 1.05rem;
+	line-height: 1.6;
+	text-align: center;
+}
+
+/* Portfolio Section */
+.portfolio {
+	padding: 48px 0;
+	background: #f8fafc;
+}
+.portfolio-title {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 32px;
+	text-align: center;
+	color: #0f172a;
+}
+.portfolio-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 32px;
+}
+.portfolio-card {
+	background: #fff;
+	border-radius: 14px;
+	box-shadow: 0 6px 24px rgba(15,23,42,0.10);
+	border: 1px solid #e6eef5;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: box-shadow 0.2s;
+}
+.portfolio-card:hover {
+	box-shadow: 0 12px 32px rgba(15,23,42,0.18);
+}
+.portfolio-thumb {
+	width: 100%;
+	height: 160px;
+	background: #f1f5f9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid #e6eef5;
+}
+.portfolio-thumb img {
+	max-width: 80%;
+	max-height: 120px;
+	object-fit: contain;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.portfolio-info {
+	padding: 18px 16px 14px 16px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.portfolio-info h4 {
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: #0ea5a4;
+}
+.portfolio-info p {
+	color: #334155;
+	font-size: 0.98rem;
+	margin: 0;
+}
+
 

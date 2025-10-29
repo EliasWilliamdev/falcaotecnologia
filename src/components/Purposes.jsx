@@ -1,15 +1,12 @@
 export function Purposes({ title, paragraph }) {
   return (
-    <div className="bg-green p-4">
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p>
+    <section className="purposes-block">
+      <h3 className="purposes-title">{title}</h3>
+      <div className="purposes-text">
         {paragraph.split("\n").map((line, i) => (
-          <span key={i}>
-            {line}
-            <br />
-          </span>
+          <p key={i}>{line}</p>
         ))}
-      </p>
-    </div>
+      </div>
+    </section>
   );
 }

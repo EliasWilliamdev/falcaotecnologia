@@ -11,13 +11,17 @@ export default function Portfolio(){
   return (
     <section className="portfolio">
       <div className="container">
-        <h2>Cases & Portfólio</h2>
+        <h2 className="portfolio-title">Cases & Portfólio</h2>
         <div className="portfolio-grid">
           {items.map(i => (
-            <div className="case" key={i.title}>
-              <img src={i.img} alt={i.title} />
-              <h4>{i.title}</h4>
-              <p>{i.desc}</p>
+            <div className="portfolio-card" key={i.title}>
+              <div className="portfolio-thumb">
+                <img src={i.img} alt={i.title} />
+              </div>
+              <div className="portfolio-info">
+                <h4>{i.title}</h4>
+                <p>{i.desc}</p>
+              </div>
             </div>
           ))}
         </div>
