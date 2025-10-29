@@ -61,14 +61,17 @@ export default function App(){
               </div>
           </div>
         </section>
-        <section id="why"><Why /></section>
+        {/* Removido bloco 'Por que escolher' daqui */}
         <section id="portfolio"><Portfolio /></section>
         {/* Novo bloco final da página: grid moderno */}
         <section id="final-block">
           <div className="container">
-            <div className="final-grid-2">
+            <div className="final-grid-3" style={{marginTop:'24px'}}>
               <div className="final-col">
                 <Testimonials />
+              </div>
+              <div className="final-col">
+                <Why />
               </div>
               <div className="final-col">
                 <Contact />
