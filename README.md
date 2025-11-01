@@ -1,4 +1,3 @@
-
     # Falcão Tecnologia — Landing Page (Vite + React)
 
     Landing page profissional para Falcão Tecnologia, focada em Projetos Elétricos, Energia Solar e Segurança Eletrônica.

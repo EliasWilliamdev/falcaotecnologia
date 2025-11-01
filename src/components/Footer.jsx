@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export default function Footer(){
+export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container">
@@ -14,8 +14,11 @@ export default function Footer(){
             <p>Email: contato@falcaotecnologia.com</p>
           </div>
         </div>
-        <div className="credit">© {new Date().getFullYear()} Falcão Tecnologia — Todos os direitos reservados</div>
+        <div className="credit">
+          © {new Date().getFullYear()} Falcão Tecnologia — Todos os direitos
+          reservados
+        </div>
       </div>
     </footer>
-  )
+  );
 }
